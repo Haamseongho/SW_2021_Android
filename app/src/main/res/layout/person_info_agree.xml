@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 타이틀바 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/piaTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4d9dd7"
+        app:scale_base_height="146"
+        app:scale_base_width="1080">
+
+        <!-- 상단 글자 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/tv_personal_info_agree"
+            app:scale_height="43"
+            app:scale_width="556" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 체크사항 목록을 담는 리스트뷰 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/piaContentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piaTitleBar"
+        app:scale_base_height="950"
+        app:scale_base_width="1080">
+
+        <!-- 체크해야 할 목록을 물고 있는 리스트뷰 -->
+        <ListView
+            android:id="@+id/piaCheckList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="850"
+            app:scale_width="1080" />
+
+        <!-- 상세 보기 버튼 :: '서비스 약관' -->
+        <Button
+            android:id="@+id/btnServiceTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_pia_detail"
+            app:scale_height="56"
+            app:scale_left="686"
+            app:scale_top="60"
+            app:scale_width="171" />
+
+        <!-- 체크 버튼 :: '서비스 약관' -->
+        <CheckBox
+            android:id="@+id/cbService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="932"
+            app:scale_height="59"
+            app:scale_top="60" />
+
+        <!-- 상세 보기 버튼 :: '개인정보 수집 항목' -->
+        <Button
+            android:id="@+id/btnInfoCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_pia_detail"
+            app:scale_height="56"
+            app:scale_left="686"
+            app:scale_top="230"
+            app:scale_width="171" />
+
+        <!-- 체크 버튼 :: '개인정보 수집 항목' -->
+        <CheckBox
+            android:id="@+id/cbInfoCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="932"
+            app:scale_height="59"
+            app:scale_top="230" />
+
+        <!-- 상세 보기 버튼 :: '개인정보 수집 및 이용목적 항목' -->
+        <Button
+            android:id="@+id/btnPurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_pia_detail"
+            app:scale_height="56"
+            app:scale_left="686"
+            app:scale_top="400"
+            app:scale_width="171" />
+
+        <!-- 체크 버튼 :: '개인정보 수집 및 이용목적 항목' -->
+        <CheckBox
+            android:id="@+id/cbPurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="932"
+            app:scale_height="59"
+            app:scale_top="400" />
+
+        <!-- 상세 보기 버튼 :: '개인정보 보유 및 이용기간 항목' -->
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_pia_detail"
+            app:scale_height="56"
+            app:scale_left="686"
+            app:scale_top="570"
+            app:scale_width="171" />
+
+        <!-- 체크 버튼 :: '개인정보 보유 및 이용기간 항목' -->
+        <CheckBox
+            android:id="@+id/cbDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="932"
+            app:scale_height="59"
+            app:scale_top="570" />
+
+        <!-- 체크 버튼 :: '개인정보 수집 및 이용에 모두 동의합니다 항목' -->
+        <CheckBox
+            android:id="@+id/cbAllCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="932"
+            app:scale_height="59"
+            app:scale_top="740" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 리스트뷰 이후 하단 영역 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piaContentsLayout"
+        app:scale_base_height="1174"
+        app:scale_base_width="1080">
+
+        <!-- 동의하고 회원가입으로 넘어가는 버튼 -->
+        <Button
+            android:id="@+id/btnSubmitAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_pia_submit"
+            app:scale_width="635"
+            app:scale_height="128"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</RelativeLayout>

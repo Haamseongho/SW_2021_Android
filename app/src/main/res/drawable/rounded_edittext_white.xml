@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#fafafa" />
+            <stroke android:width="1dp" android:color="#7b888888" android:dashGap="0dp" android:dashWidth="1dp" />
+            <padding android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp" />
+            <corners android:radius="500dp" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#1cff6500" />
+            <stroke android:width="1dp" android:color="#7b888888" android:dashGap="0dp" android:dashWidth="1dp" />
+            <padding android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp" />
+            <corners android:radius="500dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#1cff6500" />
+            <stroke android:width="1dp" android:color="#7b888888" android:dashGap="0dp" android:dashWidth="1dp" />
+            <padding android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp" />
+            <corners android:radius="500dp" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#fffafa" />
+            <stroke android:width="1dp" android:color="#7b888888" android:dashGap="0dp" android:dashWidth="1dp" />
+            <padding android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp" />
+            <corners android:radius="500dp" />
+        </shape>
+    </item>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#fafafa" />
+            <stroke android:width="1dp" android:color="#7b888888" android:dashGap="0dp" android:dashWidth="1dp" />
+            <padding android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp" />
+            <corners android:radius="500dp" />
+        </shape>
+    </item>
+</selector>

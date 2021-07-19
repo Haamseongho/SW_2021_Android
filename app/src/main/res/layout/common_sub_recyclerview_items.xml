@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:CardView="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                CardView:cardBackgroundColor="#ceffffff"
+                CardView:cardCornerRadius="10dp"
+                CardView:cardElevation="5dp"
+                CardView:cardUseCompatPadding="true"
+                CardView:contentPadding="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/txt_common_statNm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="역 이름"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_common_subline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="역 호선"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@+id/txt_common_statNm"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_common_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제보 제목(가장 최근꺼)"
+                        android:textAlignment="center"
+                        android:layout_below="@+id/txt_common_subline"
+                        android:textSize="10sp"
+                        android:maxEms="7"
+                        android:maxLines="1"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"/>
+
+
+
+                    <TextView
+                        android:id="@+id/txt_common_reportCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제보 사이즈"
+                        android:textColor="@color/cyan900"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:maxEms="7"
+                        android:maxLines="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

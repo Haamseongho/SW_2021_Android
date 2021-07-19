@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="3dp">
+
+    <TextView
+        android:id="@+id/closest_subway_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="호선"
+        android:layout_marginStart="20dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+
+    <TextView
+        android:id="@+id/closest_subway_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="호선"
+        android:layout_toEndOf="@+id/closest_subway_line"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+
+    <TextView
+        android:id="@+id/closest_subway_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="호선"
+        android:visibility="invisible"
+        android:layout_toEndOf="@+id/closest_subway_line2"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:id="@+id/closest_subway_line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="호선"
+        android:visibility="invisible"
+        android:layout_toEndOf="@+id/closest_subway_line3"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+
+
+    <TextView
+        android:id="@+id/closest_subway_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="역이름"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:padding="15dp"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#a0cccccc"/>
+
+</RelativeLayout>

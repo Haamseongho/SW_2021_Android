@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/trans_subline"
+            android:layout_width="15dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txt_transfer_subname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_toRightOf="@+id/trans_subline"
+            android:padding="10dp"
+            android:text="지나는 역 이름"
+            android:textSize="20dp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

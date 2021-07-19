@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/tv_detail_service_term"
+                android:id="@+id/imageView" />
+
+
+            <TextView
+                android:id="@+id/tvServiceTerm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imageView"
+                android:layout_gravity="center"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:padding="8dp"
+                android:layout_above="@+id/googleMap_service_term"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:text="@string/service_term1"
+                android:textColor="#3e3a39"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/googleMap_service_term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_above="@+id/subway_service_term"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:text="구글맵 서비스 이용약관"
+                android:textAlignment="center"
+                android:textColor="@color/lightBlue500" />
+
+            <TextView
+                android:id="@+id/subway_service_term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_above="@+id/btnTermsAgree"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:text="지하철 관련 공공 데이터 이용약관"
+                android:textAlignment="center"
+                android:textColor="@color/lightBlue500" />
+
+
+            <ImageView
+                android:id="@+id/btnTermsAgree"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/btn_detail_agree" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/tv_detail_service_term" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/btnTermsAgree"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="43dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvServiceTerm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/btnTermsAgree"
+                            android:layout_below="@+id/imageView"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="43dp"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:padding="8dp"
+                            android:text="@string/service_term1"
+                            android:textColor="#3e3a39"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/googleMap_service_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:text="구글맵 서비스 이용약관"
+                            android:textAlignment="center"
+                            android:textColor="@color/lightBlue500" />
+
+                        <TextView
+                            android:id="@+id/subway_service_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:text="지하철 관련 공공 데이터 이용약관"
+                            android:textAlignment="center"
+                            android:textColor="@color/lightBlue500" />
+
+
+                        <ImageView
+                            android:id="@+id/btnTermsAgree"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/btn_detail_agree" />
+
+
+                    </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>-->
+</LinearLayout>

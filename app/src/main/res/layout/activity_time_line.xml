@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.teamcadi.angelbrowser.Activity_Front.TimeLineActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="#2dcccccc">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/btn_timeline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/rounded_btn_filled_selector"
+                        android:text="1호선"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_timeline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/btn_timeline1"
+                        android:background="@drawable/rounded_btn_filled_selector"
+                        android:text="2호선"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_timeline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/btn_timeline2"
+                        android:background="@drawable/rounded_btn_filled_selector"
+                        android:text="3호선"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_timeline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toRightOf="@+id/btn_timeline3"
+                        android:background="@drawable/rounded_btn_filled_selector"
+                        android:text="4호선"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/timeline_station_name"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/station_info_header_main_sign"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0cccccc"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/stat_Up_Part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="상행" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/timeLine_Up_RecyclerView"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0cccccc"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/stat_Dn_Part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="하행" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/timeLine_Dn_RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"></android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

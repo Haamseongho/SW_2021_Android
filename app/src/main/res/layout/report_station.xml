@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="net.teamcadi.angelbrowser.Activity_Front.ReportStation">
+
+    <!-- 상단 타이틀바 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#49a7eb"
+        app:scale_base_height="146"
+        app:scale_base_width="1080">
+
+        <!-- 닫기 버튼 -->
+        <Button
+            android:id="@+id/btnReportClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_close"
+            app:scale_height="48"
+            app:scale_left="48"
+            app:scale_top="55"
+            app:scale_width="48" />
+
+        <!-- 타이틀 글자 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_report_station"
+            app:scale_height="48"
+            app:scale_left="162"
+            app:scale_top="55"
+            app:scale_width="241" />
+
+        <!-- 제보 전송 버튼 -->
+        <Button
+            android:id="@+id/rptUploadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_send"
+            app:scale_height="89"
+            app:scale_left="949"
+            app:scale_top="32"
+            app:scale_width="98" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 날짜와 시간 기재하는 부분 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportTitleBar"
+        android:background="@drawable/bg_listview_line"
+        app:scale_base_height="160"
+        app:scale_base_width="1080">
+
+        <!-- 아이콘 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_report_clock"
+            app:scale_height="64"
+            app:scale_left="48"
+            app:scale_top="48"
+            app:scale_width="64" />
+
+        <!-- 작성 시간을 표시하는 부분 -->
+        <TextView
+            android:id="@+id/tvRptDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간"
+            app:scale_height="45"
+            app:scale_left="202"
+            app:scale_textsize="40"
+            app:scale_top="53"
+            app:scale_width="470" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 역 이름-->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportStationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportDate"
+        android:background="@drawable/bg_listview_line"
+        app:scale_base_height="160"
+        app:scale_base_width="1080">
+
+        <!-- 아이콘 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_report_train"
+            app:scale_height="64"
+            app:scale_left="48"
+            app:scale_top="48"
+            app:scale_width="68" />
+
+        <!-- 역이름 -->
+        <TextView
+            android:id="@+id/tvRptSubNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="역이름"
+            app:scale_height="45"
+            app:scale_left="202"
+            app:scale_textsize="40"
+            app:scale_top="53"
+            app:scale_width="470" />
+
+        <!-- 역 검색 버튼 -->
+        <Button
+            android:id="@+id/btnRptSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_report_search"
+            app:scale_height="56"
+            app:scale_left="860"
+            app:scale_top="52"
+            app:scale_width="171" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 제목 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportStationName"
+        android:background="@drawable/bg_listview_line"
+        app:scale_base_height="160"
+        app:scale_base_width="1080">
+
+        <!-- 아이콘 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_report_pencil"
+            app:scale_height="62"
+            app:scale_left="48"
+            app:scale_top="49"
+            app:scale_width="62" />
+
+        <!-- '제목'을 입력 받는 EditText -->
+        <EditText
+            android:id="@+id/rptTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="제목"
+            app:scale_height="45"
+            app:scale_left="202"
+            app:scale_textsize="40"
+            app:scale_top="53"
+            app:scale_width="470" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 제보내용 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportSubject"
+        app:scale_base_height="1293"
+        app:scale_base_width="1080">
+
+        <!-- 아이콘 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_report_text"
+            app:scale_height="62"
+            app:scale_left="47"
+            app:scale_top="45"
+            app:scale_width="62" />
+
+        <!-- '제보내용' 글자 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_report_contents"
+            app:scale_height="35"
+            app:scale_left="202"
+            app:scale_top="56"
+            app:scale_width="136" />
+
+        <!-- 제보내용을 입력하는 EditText -->
+        <EditText
+            android:id="@+id/rptContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:hint=" 제보하실 내용을 입력해 주세요\n 입력하신 내용은 사실에 근거해야 하며 \n 허위 사실을 제보시 그에 따른 책임은 제보자에게 \n 있음을 알려드립니다."
+            app:scale_height="600"
+            app:scale_textsize="40"
+            app:scale_top="160"
+            app:scale_width="1080" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 사진 첨부를 위한 영역 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/reportPicture"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#f1f1f1"
+        android:layout_height="wrap_content"
+        app:scale_base_height="180"
+        app:scale_base_width="1080">
+
+
+        <!-- 사진 첨부하는 버튼 -->
+        <Button
+            android:id="@+id/btnRptAddPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_width="1080"
+            app:scale_height="180"
+            android:background="@drawable/btn_report_add_pic"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+    <!--    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#49a7fd"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/btn_back_report_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_drawable" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report_page"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/rptUploadBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_send_white_24dp" />
+
+            </RelativeLayout>
+        </LinearLayout>-->
+
+    <!--
+    r : report 약자
+    rpt : report 약자
+    제보하다
+    -->
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/rDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_watch_later_black_24dp" />
+
+    &lt;!&ndash;            <TextView
+                    android:id="@+id/rptDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="시간"
+                    android:textSize="12sp" />&ndash;&gt;
+
+            </RelativeLayout>
+
+        </LinearLayout>-->
+
+    <!--
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/rStation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_directions_subway_black_24dp" />
+
+                <TextView
+                    android:id="@+id/rptSubNm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rStation"
+                    android:layout_centerHorizontal="true"
+                    android:text="역이름"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/rptSubBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/rounded_btn_filled_selector"
+                    android:text="@string/report_btn"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    -->
+    <!--
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/rTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_edit_black_24dp" />
+
+                &lt;!&ndash;<EditText
+                    android:id="@+id/rptTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/rTitle"
+                    android:hint="제목"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />&ndash;&gt;
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    -->
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/boxed_area_background_subinfo"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/rptRefTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_text_fields_black_24dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rptRefTxt"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/rptRefTxt"
+                        android:text="제보 내용"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/rptContents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint=" 제보하실 내용을 입력해 주세요\n 입력하신 내용은 사실에 근거해야 하며 \n 허위 사실을 제보시 그에 따른 책임은 제보자에게 \n 있음을 알려드립니다."
+                android:textAlignment="textStart"
+                android:textSize="12sp" />
+        </LinearLayout>-->
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp">
+
+            <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sliding_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                sothree:umanoPanelHeight="45dp"
+                sothree:umanoShadowHeight="5dp">
+
+                &lt;!&ndash; 메인 &ndash;&gt;
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/ic_linked_camera_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center|bottom"
+                        android:text="사진 첨부 " />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_drop_up_black_24dp" />
+
+
+                </RelativeLayout>
+                &lt;!&ndash; Slide Menu &ndash;&gt;
+                <LinearLayout
+                    android:id="@+id/dragView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/rptImage"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:src="@drawable/ic_add_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/rptImage2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/rptImage"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:src="@drawable/ic_add_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/rptImage3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/rptImage2"
+                            android:background="@drawable/boxed_area_background_subinfo"
+                            android:src="@drawable/ic_add_black_24dp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+        </LinearLayout>-->
+</RelativeLayout>

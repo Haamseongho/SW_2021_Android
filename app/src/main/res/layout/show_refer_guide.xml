@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refer_guide_popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="10sp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#3F0099"
+        android:text="특이사항을 어떻게 작성하면 되나요?"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnReferGuideClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="닫기" />
+
+</RelativeLayout>

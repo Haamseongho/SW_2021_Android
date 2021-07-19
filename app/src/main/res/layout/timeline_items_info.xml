@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txt_timeline_barvlDt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몇 분 뒤"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_timeline_statnType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_timeline_barvlDt"
+            android:text="(급행/ITX)"
+            android:textColor="@color/red500"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_timeline_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/txt_timeline_barvlDt"
+            android:text="종착역 방면"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txt_timeline_arvlMsg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_timeline_arrival"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/txt_timeline_barvlDt"
+            android:text="현재 위치 (메세지)"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txt_timeline_arvlMsg2"
+            android:background="#9ecccccc"/>
+    </RelativeLayout>
+
+</LinearLayout>

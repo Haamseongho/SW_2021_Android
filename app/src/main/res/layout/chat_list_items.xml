@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/chatBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                CardView:cardBackgroundColor="#ceffffff"
+                CardView:cardCornerRadius="10dp"
+                CardView:cardElevation="5dp"
+                CardView:cardUseCompatPadding="true"
+                CardView:contentPadding="10dp">
+
+                <TextView
+                    android:id="@+id/chat_contents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="채팅 내용" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

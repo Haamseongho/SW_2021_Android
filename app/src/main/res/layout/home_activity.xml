@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:chatview="http://schemas.android.com/tools"
+    android:id="@+id/home_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 상단 타이틀바 영역 -->
+                <com.ssomai.android.scalablelayout.ScalableLayout
+                    android:id="@+id/homeTitleBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    app:scale_base_height="146"
+                    app:scale_base_width="1080">
+
+
+                    <!-- Drawer 메뉴 여는 버튼 -->
+                    <ImageView
+                        android:id="@+id/btnOpenMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_sky_circle"
+                        android:src="@drawable/ic_dehaze_black_24dp"
+                        app:scale_left="24"
+                        app:scale_top="24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="엔젤 브라우저"
+                        android:textColor="#49a7eb"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:scale_height="50"
+                        app:scale_left="430"
+                        app:scale_textsize="40"
+                        app:scale_top="50"
+                        app:scale_width="250" />
+                </com.ssomai.android.scalablelayout.ScalableLayout>
+
+                <!--<co.intentservice.chatui.ChatView
+                    android:id="@+id/chat_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    chatview:backgroundColor="@color/blue"
+                    chatview:bubbleBackgroundRcv="#eb6b9cff"
+                    chatview:bubbleBackgroundSend="#49a7eb"
+                    chatview:bubbleElevation="elevated"
+                    chatview:inputBackgroundColor="#8a498aeb"
+                    chatview:inputTextColor="#49a7eb"
+                    chatview:inputTextSize="15sp"
+                    chatview:sendBtnIcon="@drawable/ic_send_black_24dp"
+                    chatview:sendBtnIconTint="#49a7eb"
+                    chatview:tStampTextSize="10sp" />-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/chatListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="50dp"
+                    android:divider="@color/lightBlue500"
+                    android:dividerHeight="0.2dp"></android.support.v7.widget.RecyclerView>
+
+                <EditText
+                    android:id="@+id/edtChat"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:hint="내용을 입력하세요"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/btnChatSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toEndOf="@+id/edtChat"
+                    android:src="@drawable/ic_send_black_24dp" />
+                <!-- Insert customisation options here -->
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+
+                <ImageButton
+                    android:id="@+id/btn_start"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="#ffffff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mike_off" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 밑에 깔리는 화면 -->
+
+    <!-- 위에 덮히는 메뉴 화면 -->
+    <RelativeLayout
+        android:id="@+id/home_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/home_profile_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/user_Email"
+                        android:layout_marginBottom="20dp"
+                        android:padding="2dp"
+                        android:src="@drawable/iv_join_user_basic" />
+
+                    <TextView
+                        android:id="@+id/user_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="Email"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#a1dad9d9" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingTop="5dp">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff"
+                                android:padding="7dp">
+
+                                <ImageView
+                                    android:id="@+id/img_subway_common"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/common_station2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="자주가는 역"
+                                    android:textColor="#b4b4b4"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginStart="170dp"
+                            android:background="#b4b4b4" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff"
+                                android:padding="15dp">
+
+                                <ImageView
+                                    android:id="@+id/img_push_elevator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/push_alarm2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="푸시알림"
+                                    android:textColor="#b4b4b4"
+                                    android:textSize="12sp" />
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff"
+                                android:padding="15dp">
+
+                                <ImageView
+                                    android:id="@+id/img_subway_closest"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/closest_station2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="가장 가까운 역"
+                                    android:textColor="#b4b4b4"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="2dp"
+                                android:background="#ffffff"
+                                android:padding="14dp">
+
+                                <ImageView
+                                    android:id="@+id/img_report_elevator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/report_elevator2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="제보하기"
+                                    android:textColor="#b4b4b4"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/footer_slideMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

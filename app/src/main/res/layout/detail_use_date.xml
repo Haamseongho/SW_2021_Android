@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- '개인정보 보유 및 이용기간' 상세보기 버튼을 눌렀을 때 화면 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/date_popup_element"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/tv_detail_use_date"
+                android:id="@+id/imageView" />
+
+
+            <TextView
+                android:id="@+id/tvServiceTerm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imageView"
+                android:layout_gravity="center"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:padding="8dp"
+                android:layout_above="@+id/btnDateAgree"
+                android:background="@drawable/boxed_area_background_subinfo"
+                android:text="@string/service_term4"
+                android:textColor="#3e3a39"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/btnDateAgree"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/btn_detail_agree" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        app:scale_base_height="1162"
+        app:scale_base_width="836">
+
+        &lt;!&ndash; 상단 타이틀 제목 &ndash;&gt;
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_detail_use_date"
+            app:scale_height="40"
+            app:scale_left="205"
+            app:scale_top="65"
+            app:scale_width="425" />
+
+        &lt;!&ndash; 내용이 삽입되는 영역 &ndash;&gt;
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:scale_base_height="707"
+            app:scale_base_width="688"
+            app:scale_height="707"
+            app:scale_left="74"
+            app:scale_top="165"
+            app:scale_width="688">
+
+            &lt;!&ndash; 내용이 출력되는 텍스트뷰 &ndash;&gt;
+            <TextView
+                android:id="@+id/tvServiceTerm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="텍스트가 입력되는 부분입니다."
+                android:textColor="#3e3a39"
+                android:textStyle="bold"
+                app:scale_height="700"
+                app:scale_textsize="35"
+                app:scale_width="680" />
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+
+        &lt;!&ndash; '동의하기' 버튼 &ndash;&gt;
+        <Button
+            android:id="@+id/btnDateAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_detail_agree"
+            app:scale_height="113"
+            app:scale_left="154"
+            app:scale_top="975"
+            app:scale_width="529" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>-->
+
+</LinearLayout>

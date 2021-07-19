@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CardView="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/tools"
+    android:id="@+id/report_item_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    cardview:cardBackgroundColor="#ceffffff">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        CardView:cardBackgroundColor="#ceffffff"
+        CardView:cardCornerRadius="10dp"
+        CardView:cardElevation="5dp"
+        CardView:cardUseCompatPadding="true"
+        CardView:contentPadding="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="13dp"
+                android:text="제보자 이름" />
+
+            <TextView
+                android:id="@+id/txt_report_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_report_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:ems="15"
+                android:maxLines="1"
+                android:text="제보 제목" />
+
+            <TextView
+                android:id="@+id/txt_report_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="5dp"
+                android:text="제보 날짜"
+                android:textSize="10sp" />
+
+
+            <TextView
+                android:id="@+id/txt_report_moreData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:text=""
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

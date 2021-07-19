@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.teamcadi.angelbrowser.Activity_Front.TransferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#49a7eb"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/btn_back_transfer_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/station_transfer_info_header"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="0.4"
+                      android:background="#d9d9d9"
+                      android:orientation="horizontal">
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:padding="2dp">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_gravity="center"
+                              android:background="#ffffff"
+                              android:padding="2dp">
+
+                              <TextView
+                                  android:id="@+id/txt_depart"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_margin="10dp"
+                                  android:text="출발역"
+                                  android:textSize="12sp" />
+
+                              <TextView
+                                  android:id="@+id/txt_departure_statNm"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@id/txt_depart"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_margin="10dp"
+                                  android:lineSpacingMultiplier="0.2"
+                                  android:text="출발역"
+                                  android:textSize="30sp"
+                                  android:textStyle="bold" />
+
+                          </RelativeLayout>
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:background="#d9d9d9"
+                          android:orientation="vertical"
+                          android:padding="2dp">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:background="#ffffff"
+                              android:padding="2dp">
+
+                              <TextView
+                                  android:id="@+id/txt_arrival"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_margin="10dp"
+                                  android:text="도착역"
+                                  android:textSize="12sp" />
+
+                              <TextView
+                                  android:id="@+id/txt_arrival_statNm"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@+id/txt_arrival"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_margin="10dp"
+                                  android:lineSpacingMultiplier="0.2"
+                                  android:text="도착역"
+                                  android:textSize="30sp"
+                                  android:textStyle="bold" />
+
+                          </RelativeLayout>
+
+
+                      </LinearLayout>
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="0.5"
+                      android:orientation="horizontal"
+                      android:padding="2dp">
+
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+
+                              <View
+                                  android:layout_width="80dp"
+                                  android:layout_height="2dp"
+                                  android:layout_alignParentBottom="true"
+                                  android:layout_alignParentRight="true"
+                                  android:layout_centerInParent="true"
+                                  android:background="#d9d9d9"></View>
+
+
+                              <TextView
+                                  android:id="@+id/txt_transfer1"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginLeft="30dp"
+                                  android:layout_marginTop="20dp"
+                                  android:text="최소환승 시간"
+                                  android:textColor="#000000"
+                                  android:textSize="12sp" />
+
+                              <TextView
+                                  android:id="@+id/txt_transfer_minTime"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@+id/txt_transfer1"
+                                  android:layout_centerInParent="true"
+                                  android:layout_marginTop="10dp"
+                                  android:text="최소환승 시간"
+                                  android:textColor="#000000"
+                                  android:textSize="18sp" />
+
+
+                          </RelativeLayout>
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+
+                              <View
+                                  android:layout_width="match_parent"
+                                  android:layout_height="2dp"
+                                  android:layout_alignParentBottom="true"
+                                  android:layout_centerInParent="true"
+                                  android:background="#d9d9d9"></View>
+
+                              <TextView
+                                  android:id="@+id/txt_transfer2"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_marginTop="20dp"
+                                  android:text="환승"
+                                  android:textColor="#000000"
+                                  android:textSize="12sp" />
+
+                              <TextView
+                                  android:id="@+id/txt_transfer_minCount"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@+id/txt_transfer2"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_marginTop="10dp"
+                                  android:text="최소환승 수"
+                                  android:textColor="#000000"
+                                  android:textSize="18sp" />
+
+                          </RelativeLayout>
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+
+
+                              <View
+                                  android:layout_width="80dp"
+                                  android:layout_height="2dp"
+                                  android:layout_alignParentBottom="true"
+                                  android:layout_alignParentLeft="true"
+                                  android:layout_centerInParent="true"
+                                  android:background="#d9d9d9"></View>
+
+                              <TextView
+                                  android:id="@+id/txt_transfer3"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_marginTop="20dp"
+                                  android:text="이동 수"
+                                  android:textColor="#000000"
+                                  android:textSize="12sp" />
+
+                              <TextView
+                                  android:id="@+id/txt_move_cnt"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_below="@+id/txt_transfer3"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_marginTop="10dp"
+                                  android:text="최소환승 수"
+                                  android:textColor="#000000"
+                                  android:textSize="18sp" />
+
+                          </RelativeLayout>
+
+
+                      </LinearLayout>
+
+
+                  </LinearLayout>
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+                  &lt;!&ndash;지나는역 &ndash;&gt;
+                  <TextView
+                      android:id="@+id/txt_transfer_subwayNm"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:text="지나는 역"
+                      android:textAlignment="center"
+                      android:textSize="12sp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/txt_transfer_subwayNm2"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:text="순서: (상 -> 하)"
+                      android:textAlignment="center"
+                      android:textColor="#74403f3f"
+                      android:textSize="11sp" />
+
+                  <LinearLayout
+                      android:id="@+id/transfer_subway_frame"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginTop="5dp"
+                      android:orientation="horizontal"
+                      android:padding="20dp">
+
+                      <ScrollView
+                          android:id="@+id/subRoute_ScrollView"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:textAlignment="center">
+
+                          <LinearLayout
+                              android:id="@+id/subRoute_Frame"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:gravity="center"
+                              android:orientation="vertical"
+                              android:padding="15dp">
+
+                          </LinearLayout>
+                      </ScrollView>
+                  </LinearLayout>
+
+              </LinearLayout>
+          </LinearLayout>
+
+
+      </LinearLayout>
+  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_arrival"
+                    android:layout_alignBottom="@+id/txt_arrival"
+                    android:layout_alignStart="@+id/cnt_elevator"
+                    android:layout_marginStart="11dp"
+                    android:text="출발역"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_departure_statNm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_depart"
+                    android:lineSpacingMultiplier="0.2"
+                    android:text="출발역"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+                <TextView
+                    android:id="@+id/txt_arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/imageView2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="21dp"
+                    android:text="도착역"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_arrival_statNm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txt_arrival"
+                    android:lineSpacingMultiplier="0.2"
+                    android:text="도착역"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cnt_elevator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:text="엘레베이터 n회"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/cnt_wheel_lift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/cnt_elevator"
+                    android:text="휠체어 리프트 n회"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/cnt_runway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/cnt_wheel_lift"
+                    android:text="경사로 n회"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_transfer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txt_move_cnt"
+                    android:layout_alignStart="@+id/view"
+                    android:text="환승"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_transfer_minCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_move_cnt"
+                    android:layout_alignBottom="@+id/txt_move_cnt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:text="최소환승 수"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="#d9d9d9"></View>
+
+                <TextView
+                    android:id="@+id/txt_transfer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="이동 수"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_move_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_transfer3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="경유 역 갯수"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="#d9d9d9"></View>
+
+
+                <TextView
+                    android:id="@+id/txt_transfer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="최소환승 시간"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_transfer_minTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_transfer1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="최소환승 시간"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txt_transfer_minCount"
+                    android:layout_alignTop="@+id/txt_transfer2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/transfer_cyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

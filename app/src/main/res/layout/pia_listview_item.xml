@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 각 리스트뷰 기본 항목 아이템 틀 정의 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="170"
+        app:scale_base_width="1080">
+
+        <!-- 체크를 해야 하는 항목 텍스트 -->
+        <TextView
+            android:id="@+id/piaListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="항목 텍스트"
+            android:textColor="#585a6b"
+            android:textStyle="bold"
+            app:scale_height="48"
+            app:scale_left="94"
+            app:scale_textsize="40"
+            app:scale_top="56"
+            app:scale_width="739" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</RelativeLayout>

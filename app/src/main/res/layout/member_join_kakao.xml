@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 상단 타이틀바 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:id="@+id/fbTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5b80e8"
+        app:scale_base_height="146"
+        app:scale_base_width="1080">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="엔젤 브라우저 회원가입"
+            app:scale_height="146"
+            app:scale_textsize="40"
+            android:textColor="@color/rippelColor"
+            app:scale_width="1080" />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <!-- 회원가입 작성 영역 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fbTitleBar">
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:id="@+id/fbJoinArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_base_height="3000"
+            app:scale_base_width="1080">
+
+            <!-- 사진이 보여지는 영역 -->
+            <ImageView
+                android:id="@+id/ivMyKakaoProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/iv_join_user_background"
+                app:scale_height="300"
+                app:scale_top="50"
+                app:scale_width="300" />
+
+            <!-- "이메일" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일 : "
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="500"
+                app:scale_width="200" />
+
+            <Button
+                android:id="@+id/btnKakaoEmailCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dual"
+                app:scale_height="47"
+                app:scale_left="861"
+                app:scale_textsize="30"
+                app:scale_top="508"
+                app:scale_width="145" />
+
+            <!-- 이메일 아이디를 불러오는 TextView -->
+            <EditText
+                android:id="@+id/tvMyKakaoEmailID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:hint="이메일을 입력하주세요"
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="200"
+                app:scale_textsize="40"
+                app:scale_top="500"
+                app:scale_width="500" />
+
+
+
+            <!-- "비밀번호" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 : "
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="650"
+                app:scale_width="200" />
+
+            <!-- 비밀번호를 입력하는 EditText-->
+            <EditText
+                android:id="@+id/etMyInputPW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                app:scale_height="120"
+                app:scale_left="280"
+                app:scale_textsize="40"
+                app:scale_top="630"
+                app:scale_width="450" />
+
+            <!-- "비밀번호 확인" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 확인 : "
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="800"
+                app:scale_width="300" />
+
+            <!-- 비밀번호를 다시 한번 입력하는 EditText-->
+            <EditText
+                android:id="@+id/etMyInputPWCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                app:scale_height="120"
+                app:scale_left="350"
+                app:scale_textsize="40"
+                app:scale_top="780"
+                app:scale_width="450" />
+
+            <!-- "이름" 글자 -->
+
+            <!-- 이름을 불러오는 TextView -->
+            <TextView
+                android:id="@+id/tvMyKakaoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="200"
+                app:scale_textsize="40"
+                app:scale_top="950"
+                app:scale_width="500" />
+
+            <!-- "가입 유형 선택" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가입 유형 선택 : "
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="1100"
+                app:scale_width="300" />
+
+            <!-- 가입 유형을 선택하는 라디오 버튼 -->
+            <RadioGroup
+                android:id="@+id/rgUserTypeSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:scale_left="50"
+                app:scale_top="1210"
+                app:scale_width="680">
+
+                <!-- "일반"을 선택하는 버튼 -->
+                <RadioButton
+                    android:id="@+id/rbTypeGeneral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일반" />
+
+                <!-- "휠체어 이용자"을 선택하는 버튼 -->
+                <RadioButton
+                    android:id="@+id/rbTypeWheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휠체어 이용자" />
+            </RadioGroup>
+
+
+
+            <!-- "이용 중인 휠체어 유형을 선택하세요" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용 중인 휠체어 유형을 선택하세요."
+                android:textColor="#000000"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="1360"
+                app:scale_width="680" />
+
+            <!-- 휠체어 유형을 선택하는 라디오 버튼 -->
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:scale_left="50"
+                app:scale_top="1470"
+                app:scale_width="680">
+
+                <!-- 수동 휠체어를 선택하는 버튼 -->
+                <RadioButton
+                    android:id="@+id/rbWheelManual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수동" />
+
+                <!-- 전동 휠체어를 선택하는 버튼 -->
+                <RadioButton
+                    android:id="@+id/rbWheelElectric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전동" />
+
+                <RadioButton
+                    android:id="@+id/rbNothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사용안함" />
+
+            </RadioGroup>
+
+            <!-- "카카오톡 아이디를 적어주세요" 글자 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카카오톡 아이디를 적어주세요."
+                android:textColor="#000000"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="1600"
+                app:scale_width="550" />
+
+
+            <!-- 카카오톡 아이디를 입력하는 EditText-->
+            <EditText
+                android:id="@+id/edtMyKakaoID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:maxLines="1"
+                app:scale_height="150"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="1730"
+                app:scale_width="600" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름 :  "
+                android:textColor="#000000"
+                app:scale_height="100"
+                app:scale_left="50"
+                app:scale_textsize="40"
+                app:scale_top="950"
+                app:scale_width="200" />
+
+
+            <ImageView
+                android:id="@+id/btnKakaoJoinOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/btn_apply_join"
+                android:text="가입완료"
+                app:scale_height="206"
+                app:scale_textsize="40"
+                app:scale_top="1950"
+                app:scale_left="261"
+                app:scale_width="580" />
+
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+    </ScrollView>
+
+    <!-- "가입완료" 버튼 영역 -->
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:scale_base_height="256"
+        app:scale_base_width="1080">
+
+        <!-- "가입완료" 버튼 -->
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</RelativeLayout>

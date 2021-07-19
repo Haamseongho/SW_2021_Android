@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">엔젤브라우저</string>
+
+    <!-- 카카오 시작하기를 사용하기 위한 Native 키 값 -->
+    <string name="ab_kakao_app_key">3ddf9aec22d66f2c82b8ab510d62d517</string>
+
+    <!-- 페이스북 시작하기를 사용하기 위한 App 연동 값 -->
+    <string name="facebook_app_id">1489945794382557</string>
+    <string name="fb_login_protocol_scheme">fb1489945794382557</string>
+
+
+    <string name="clova_client_id">gHRuCgzl3BX0Hncwj2fY</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_start">Start</string>
+    <string name="str_stop">Stop</string>
+    <string name="config_notification">엘레베이터 관련 푸시알림 설정</string>
+    <string name="report_page">지하철 긴급상황 제보하기</string>
+    <string name="report_btn">노선/역 검색</string>
+    <string name="sub_filter_btn">지하철 역 검색</string>
+    <string name="report_upload">업로드</string>
+    <string name="report_cancel">작성 취소</string>
+    <string name="geo_api_key">AIzaSyBKXEdzpFAk212biVdn2VzXfkF2YO_IIZQ</string>
+    <string name="station_info_header">주변 역 정보 확인하기</string>
+    <string name="elevator_info_header">역 엘레베이터 정보 확인하기</string>
+    <string name="station_transfer_info_header">환승 정보 확인하기</string>
+    <string name="station_report_detail_info_header">제보 상세 내용</string>
+    <string name="common_station_info_header">자주 가는 역 등록 페이지</string>
+    <string name="closest_station_info_header">가까운 역 정보 페이지</string>
+    <string name="title_activity_common_station">CommonStationActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="service_term1"><![CDATA[엔젤브라우저 서비스는 정보보호 및 관련 법률, 개인정보보호법, 정보통신서비스 제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며 관련 법령에 의거하여 \n 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 본 개인정보처리방침은 다음과 같으며 서비스 이용에 적용되게 됩니다.
+    \n\n [개인 위치 기반 정보 이용 약관]
+    \n [지하철 관련 공공데이터 이용 약관]
+    \n\n 아래 링크를 클릭 하여
+    확인해주시기 바랍니다.]]></string>
+    <string name="service_term2">엔젤 브라우저에서 수집한 개인 정보는 다음의 목적을 위해 활용합니다. \n\n
+        가. 엘레베이터 위치 관련 제보시 허위로 제보하는 경우를 방지하기 위함.
+        \n나. 지하철 이용 시 개인 위치를 조회하여 지하철 관련 정보를 손쉽고 빠르게 얻을 수 있도록 하기 위함.
+        \n다. 회원관리
+        \n\n1. 허위 제보를 통하여 원활한 서비스에 문제를 줄 경우 경고 처리
+        \n2. 경고가 3회 누적될 경우 회원 탈퇴가 진행
+        \n3. 몸이 불편하신 분들을 위해서 엔젤 브라우저에서 제공하는 서비스를 카카오톡으로도 받아볼 수 있도록 함
+        \n(3번 사항은 현재 개발 중에 있습니다.</string>
+    <string name="service_term3">엔젤 브라우저에서 수집한 개인 정보는 기본적으로 카카오 계정과 페이스북 계정을 통한 기본 정보를 가져오게 됩니다. \n\n 그 외에 지하철 관련 서비스를 이용하기 위하여
+        \n위치 정보를 수집하고 제보 관련 되어서 허위 정보를 올리는 것을 근절 및 처벌하고자 카카오 ID를 별도로 수집합니다. \n
+        2주간 활동 계획이 없을 경우 자동 휴면 계정으로 들어가며
+        탈퇴할 경우 수집된 개인 정보는 \n 모두 일괄 삭제됩니다. \n\n
+        탈퇴 관련된 기능은 현재 작업 중에 있으며 \n2018년 02월 15일 2차 베타 버전으로 출시됩니다.
+        이점 참고해주시기 바랍니다.</string>
+    <string name="service_term4">엔젤 브라우저에서는 주요 개인 정보를 수집하지 않습니다.
+        수집하는 개인 정보중 가장 중요한 정보는 카카오 ID가 되겠습니다. \n\n
+        이는 개인정보 보호접 제 17조 및 18조에 의거하여 처리되며,
+        개인정보를 타인에게 양도하지 않습니다. \n\n
+        개인 정보 보유 기간은 서비스 사용 기간동안 진행되며, 2주간 활용하지 않을 경우 휴면 상태가 됩니다. \n
+        휴면 상태일 때에도 개인 정보는 유지되며, \n
+        탈퇴할 경우 일괄 삭제되어 사용자의 프라이버시를 지키게 됩니다.
+        \n\n
+        타인에게 자신의 정보를 양도하여 위법한 행위를 할 경우
+        개인 정보 보호법에 의거하여 처벌 받을 수 있으니 주의해주시기 바랍니다.
+    </string>
+</resources>
