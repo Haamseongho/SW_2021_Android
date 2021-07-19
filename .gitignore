@@ -1,3 +1,7 @@
+# appkey
+app/google-services.json
+app/*.json
+
 # Built application files
 *.apk
 *.aar
