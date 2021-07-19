@@ -19,7 +19,7 @@
     <string name="sub_filter_btn">지하철 역 검색</string>
     <string name="report_upload">업로드</string>
     <string name="report_cancel">작성 취소</string>
-    <string name="geo_api_key">AIzaSyBKXEdzpFAk212biVdn2VzXfkF2YO_IIZQ</string>
+    <string name="geo_api_key"></string>
     <string name="station_info_header">주변 역 정보 확인하기</string>
     <string name="elevator_info_header">역 엘레베이터 정보 확인하기</string>
     <string name="station_transfer_info_header">환승 정보 확인하기</string>
